@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="text" maxlength="4" > 
+    <button id="btn" onclick="func()">click</button>
+    <script>
+    
+     function func(){ 
+        let str =   document.getElementsByTagName("input")[0].value;
+        let first =0;
+        let second =0;
+        let third =0;
+        let forth=0;
+    if((str[0]==str[1])&&(str[1]==str[2])&&(str[2]==str[3])){
+        
+        alert("please enter number with atleast 2 different digits");
+    }
+    
+    for(let i=0;i<=3;i++){
+
+        if(str[i]>first){
+            first=str[i];
+           
+        }
+       }
+    for(let i=0;i<=4;i++){
+        if(str[i]<first && str[i]>second){
+            second=str[i];
+        }}
+        for(let i=0;i<=4;i++){
+        if(str[i]<second && str[i]>third){
+            third=str[i];
+        }}
+        for(let i=0;i<=4;i++){
+        if(str[i]<third && str[i]>forth){
+            forth=str[i];
+        }}
+   let result = 0;
+  
+   let inp=  document.getElementsByTagName("input")[0].value;
+        if((first+second+third+forth)-(forth+third+second+first)!=6174){
+            document.getElementsByTagName("input")[0].value=(first+second+third+forth)-(forth+third+second+first);
+            
+                    }
+else{
+    alert("The difference is "+((first+second+third+forth)-(forth+third+second+first))+",which is a kaprekar's costant");
+}
+          }
+       
+        
+    </script>
+</body>
+</html>

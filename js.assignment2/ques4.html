@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <script>
+        document.getElementsByClassName('cls')[0].innerHTML="browser name = "
+         +navigator.appName;
+         document.getElementsByClassName('cls')[1].innerHTML="  browser version= "+navigator.appVersion;
+         document.getElementsByClassName('cls')[2].innerHTML="  code:"+navigator.appCodeName;
+         document.getElementsByClassName('cls')[3].innerHTML="  Platform"+navigator.platform;
+         document.getElementsByClassName('cls')[4].innerHTML="  cookie's enabled is"+navigator.cookieEnabled;
+         document.getElementsByClassName('cls')[5].innerHTML="   Browser's user agent header"+navigator.userAgent ;
+      
+    </script>
+</body>
+</html>

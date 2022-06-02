@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            overflow-y: scroll;
+            border: 2px solid black;
+            height: 90px;
+            width: 140px
+        }
+    </style>
+</head>
+
+<body>
+    <select name="list" id="" size="7">
+        <option value="item1">item1</option>
+        <option value="item2">item2 </option>
+        <option value="item3">item3</option>
+        <option value="item4">item4</option>
+        <option value="item4">item5</option>
+        <option value="item6">item6</option>
+        <option value="item4">item7</option>
+    </select>
+    &emsp;
+    <button onclick="func()">>></button>
+    &emsp;
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <script>
+        let a = document.getElementsByTagName("select")[0].length;
+        let text = document.getElementsByTagName("textarea")[0].innerText;
+
+
+        document.getElementsByTagName("button")[0].addEventListener("click", () => {
+            for (let i = 0; i <= a; i++) {
+                if (document.getElementsByTagName('option')[i].selected == true) {
+
+
+                    document.getElementsByTagName("textarea")[0].value = document.getElementsByTagName("textarea")[0].value + document.getElementsByTagName('option')[i].value + '\n';
+                }
+
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

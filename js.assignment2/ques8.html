@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center>  <textarea name="txt" id="txt" cols="80" rows="30" style="overflow-y: scroll;"><!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+      <center><a href="https://www.zconsolutions.com" target="_blank">Zcom Solutions.com</a> <br> <br>
+      <button id="btn" onclick="func()">Disable</button></center>
+      <script>
+          function func(){
+             
+              if(document.getElementsByTagName("a")[0].style.pointerEvents=='none'){
+                  document.getElementsByTagName("a")[0].style.pointerEvents='visible';
+              document.getElementsByTagName("button")[0].innerText='Disable';
+  
+              }
+              else{
+                  document.getElementsByTagName("a")[0].style.pointerEvents='none';
+              document.getElementsByTagName("button")[0].innerText='Enable';
+              }
+          }
+      </script>
+  </body>
+  </html></textarea>
+<br>
+
+<button onclick="func()">SHOW CODE</button></center>
+
+<script>
+  let txt=document.getElementsByTagName("textarea")[0].value;
+function func(){
+  
+  if(document.getElementsByTagName('button')[0].innerHTML=='SHOW CODE'){ 
+  
+    document.getElementsByTagName("textarea")[0].value=""
+    document.getElementsByTagName('button')[0].innerHTML='HIDE CODE'
+   
+}
+else{
+  document.getElementsByTagName('button')[0].innerHTML='SHOW CODE'
+  document.getElementsByTagName("textarea")[0].value=txt;
+}}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="txt">&emsp;
+    <button id="btn" onclick="func()">click</button>&emsp;
+    <select name="dropdwn" id="drpdwn">
+
+    </select>
+
+    <script>
+     function func(){
+    let data=document.getElementsByTagName("input")[0].value;
+    let a = document.createElement("option")
+    a.text=data;
+    document.getElementsByTagName("select")[0].add(a);
+     }
+      
+    </script>
+</body>
+</html>

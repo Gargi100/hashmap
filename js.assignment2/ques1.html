@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color: rgb(27, 243, 135); height: 324px; width: 335px;">
+        Your Favourites Scripts and languages <br>
+
+        <input type="checkbox" name="" id=""> java<br>
+
+        <input type="checkbox" name="" id=""> javascript <br>
+        <input type="checkbox" name="" id=""> active server pages <br>
+        <input type="checkbox" name="" id=""> sql <br>
+        <input type="checkbox" name="" id=""> html <br>
+        <br><br>
+        <button onclick="func1()">Select/Deselect</button> <br><br><br>
+        <button onclick="func2()">Count</button>
+
+    </div>
+    <script>
+      var count=0;
+         let len=0;
+        function func1(){
+
+            for(let i=0;i<=5;i++){
+          if(document.getElementsByTagName("input")[i].checked==true){
+            document.getElementsByTagName("input")[i].checked=false;
+          }}
+            
+          
+         
+          
+            }
+           
+                document.getElementsByTagName("button")[1].onclick = function (){
+                 var len = document.querySelectorAll('input[type="checkbox"]:checked')
+                 alert(len.length);
+                }
+              
+          
+        
+    </script>
+</body>
+
+</html>

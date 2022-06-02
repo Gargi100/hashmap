@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><a href="https://www.zconsolutions.com" target="_blank">Zcom Solutions.com</a> <br> <br>
+    <button id="btn" onclick="func()">Disable</button></center>
+    <script>
+        function func(){
+           
+            if(document.getElementsByTagName("a")[0].style.pointerEvents=='none'){
+                document.getElementsByTagName("a")[0].style.pointerEvents='visible';
+            document.getElementsByTagName("button")[0].innerText='Disable';
+
+            }
+            else{
+                document.getElementsByTagName("a")[0].style.pointerEvents='none';
+            document.getElementsByTagName("button")[0].innerText='Enable';
+            }
+        }
+    </script>
+</body>
+</html>

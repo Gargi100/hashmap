@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Input width: &emsp; <input type="text" name="" id="" style="width: 200px;"> <br><br>
+    Input height: &emsp; <input type="text" name="" id="" style="width: 200px;"><br><br>
+    <button style="border: 2px solid blue;" onclick="func()">Set Size</button>
+    <center>
+        <table style="height: 300px;width:300px ;">
+            <tr><td style="background-color: red;">Row1 col1</td>
+            <td style="background-color: rgb(104, 100, 242);">Row1 col2</td>
+            <td style="background-color: rgb(248, 247, 247);">Row1 col3</td></tr>
+            <tr><td style="background-color: rgb(31, 215, 55);">Row2 col1</td>
+            <td style="background-color: rgb(241, 166, 176);">Row2 col2</td>
+            <td style="background-color: rgb(198, 193, 193);">Row2 col3</td></tr>
+            <tr><td style="background-color: rgb(242, 244, 128);">Row3 col1</td>
+            <td style="background-color: red;">Row3 col2</td>
+            <td style="background-color: rgb(54, 234, 111);">Row3 col3</td></tr>
+        </table>
+    </center>
+    <script>
+        function func(){
+           
+           document.getElementsByTagName("table")[0].style.height=document.getElementsByTagName("input")[1].value+"px";
+           document.getElementsByTagName("table")[0].style.width=document.getElementsByTagName("input")[0].value+"px";
+        }
+    </script>
+</body>
+</html>
