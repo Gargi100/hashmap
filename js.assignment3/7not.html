@@ -21,25 +21,23 @@
     <div style="color: red;font-size: 40px;"></div>
     <script>
     
+    let select=0;
+  
+    let hou= d.getHours();
     
-    let d = new Date();
     
         function func(){
-            for(let i =0;i<=3;i++){
-               let select= document.getElementsByTagName("option")[i].value
-               alert(select)
-               if(select.nodeValue==2){
-                alert("aasdfa")
-                break
-               }
-            }
-            alert(selt)
-            // setInterval(()=>{
-            //     document.getElementsByTagName('div')[0].innerHTML+=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-            // },1000*select)
+            let d = new Date();
+            let t= document.getElementsByTagName("select")[0].selectedIndex;
+    let y=document.getElementsByTagName("select")[0].options;
+    let k = parseInt( y[t].text);
+document.getElementsByTagName("div")[0].innerHTML=d.toLocaleTimeString();
+            // document.getElementsByTagName("div")[0].innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+           
+            setTimeout(function(){func()},k*1000);}
             
-            // document.getElementsByTagName('div')[0].innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-        }
+        
+        
     </script>
 </body>
 
