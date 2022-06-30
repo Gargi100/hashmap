@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="">
-    <button onclick="func()">button</button>
+   <form action="" name="f2"> <input type="text" name="valuo" id="txt">
+    <button onclick="func()">button</button></form>
     <script>
        function func(){
-
+         opener.document.f1.inp.value=document.f2.valuo.value;
+           self.close();
         }
     </script>
 </body>
