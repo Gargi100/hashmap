@@ -24,15 +24,15 @@
             <h2>USER REGISTRATION FORM</h2>
         </center>
         FIRST NAME: &emsp;&nbsp;
-        <input type="text" name="first" id="" class="txt" required><br>
+        <input type="text" name="first" id="" class="txt" required autofocus><br>
         LAST NAME: &emsp;&nbsp;&nbsp;
         <input type="text" name="last" id=""  class="txt" required><br>
         USER NAME:
         &emsp; &nbsp;
         <input type="text" name="user" id=""  class="txt"required><br>
-        NUMBER:
+        PASWORD:
         &emsp; &emsp; &emsp;
-        <input type="text" name="password" id="password" maxlength="10"  class="txt" required><br>
+        <input type="password" name="password" id="password" minlength="8"  class="txt" required pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})"><br>
         GENDER: &emsp;&emsp;&emsp;
         <label for="rad" id="gender">
             MALE <input type="radio" name="rad" id="male" value="MALE" class="m1"  >
@@ -48,9 +48,9 @@
        </label>
        NUMBER:
        &emsp; &emsp; &emsp;
-       <input type="text" name="password" id="pass" minlength="8"  class="txt" required><br>
+       <input type="text" name="password" class="num" maxlength="12" class="txt" onkeyup="funcc(this)" required><br>
         
-        USER TYPE &emsp;  &emsp;<input type="text" name="" id="">
+        USER TYPE &emsp;  &emsp;<input type="text" name="" id="lop">
        <br> ALTERNATE EMAIL <br> ADDRESS: &emsp;  &emsp; &nbsp;
         <input type="text" name="" id=""  class="txt" required><br>
         ADDRESS 1: &emsp;  &nbsp; &nbsp;
@@ -85,7 +85,7 @@
         MARATHI<input type="checkbox" name="" id="" value="MARATHI"  class="chckbox" ><br>
         <br><center>
             <button class="btn">SUBMIT</button>
-            <button onclick="func()" class="btn">show stats</button>
+        
         </center>
         <br class="br">
     </form>
@@ -102,6 +102,13 @@
          husband.style.display='none';
      })
     
-    
+      
+    // loop.addEventListener("click",()=>{
+     
+    //     alert( document.getElementsByTagName("input")[8].value.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, '$1-$2-$3-$4'));
+    //     //document.getElementById("num").innerHTML.replace(/(\d{3})(\d{3})(\d+)/, '$1-$2-$3');
+    //     document.getElementsByTagName("input")[8].value.replace(/(\d{3})(\d{3})(\d+)/, '$1-$2-$3')
+    // })
+     
   </script></body>
     </html>
