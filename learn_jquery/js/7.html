@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p::-webkit-progress-value{
+           background-color:  rgb(42, 237, 32);
+        }
+        #p::-webkit-progress-bar{
+           background-color:rgb(31, 55, 55);
+        }
+    </style>
+</head>
+<body>
+    <progress id="p" style="height: 30px; width: 300px; border-radius: 0px;" max="1000"  ></progress>
+    <button id="btn1">start</button>
+    <button id="btn2">reset</button>
+    <button id="btn3">stop</button>
+   
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    //   $("#p").animate(function(){
+    //     for(let i =0;i<=1000;i=i+50){
+    //     $("#p").val( $("#p").val()+i)
+    // }
+    //   },200)
+   
+//      var intee;
+//       $(document).ready(function(){
+//         if($("#btn1").html()==="start"){ 
+//         $("#btn1").click(function(){ 
+//        intee=  setInterval(() => {
+//             $("#p").val( $("#p").val()+50)
+//             $("#btn1").text("stop")
+          
+//         }, 1000);
+//         })
+//         $("#btn1").dblclick(function(){ clearInterval(intee);})
+//    } 
+   
+  
+     
+    //    $("#btn2").click(function(){ 
+       
+    
+
+   // })
+    // if($("#btn1").html()==="stop"){ 
+    //         $("#btn2").click(function(){ 
+    // clearInterval(intee);
+    //         })
+    // }
+    
+
+    $(document).ready(function(){
+$("#btn1").click(function(){ 
+    $("#p").animate({value:1000},10000)
+    })
+    $("#btn3").click(function(){ 
+             $("#p").stop();
+    })
+    $("#btn2").click(function(){
+    $("#p").val(0)
+    })})
+   
+// })
+// $("#btn1").text("stop").click(function(){
+//     $("#p").
+// })
+   
+
+// $("#btn1").click(function(){ 
+//     if( $("#btn1").text("stop")==true){
+//         alert("asdf")
+//         $("#btn1").text("start")
+//     }}
+// )
+    
+
+</script>
+</html>

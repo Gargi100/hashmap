@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li {
+        position: relative;
+        bottom: -12px;
+        left: -37px;
+        display: inline-block;
+        width: 109px;
+        height: 30px;
+        padding-left: 8px;
+        background-color: rgb(233, 224, 224);
+        border-radius: 5px;
+    }
+
+    nav {
+        height: 45px;
+        background-color: grey;
+        width: 100vw;
+        border-radius: 5px;
+        margin-top: -15px;
+        margin-left: -7px;
+    }
+</style>
+
+<body>
+    <nav>
+
+        <ul>
+            <li id="l1" style="width: 50px;">jquery</li>
+            <li id="l2">
+                <center>jquery syntax</center>
+            </li>
+            <li id="l3">
+                <center>jquery effect</center>
+            </li>
+        </ul>
+    </nav>
+    <div class="d3" style="display: none; height: 500px; width: 900px; background-color: cadetblue; ">
+       <center> <div class="d4" style="display: none; height: 200px; width: 200px; background-color: yellow;border-radius:100px;">
+    
+    </div></center>
+    <center><b style="color: rgb(137, 241, 130); font-size: larger; "><big>hello!!</big></b></center>
+    </div>
+    <div class="d1" style="display: none;">
+        <center><b><big>jQuery is a fast, small, and feature-rich JavaScript library. <br> It makes things like HTML
+                    document
+                    traversal and manipulation, <br> event handling, animation, and Ajax much simpler</big></b></center>
+    </div>
+    <div style=" display: none; background-color: rgb(233, 224, 224);" class="d2"><b><big>
+                <pre>jQuery Syntax
+            The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
+            
+            Basic syntax is: $(selector).action()
+            
+            A $ sign to define/access jQuery
+            A (selector) to "query (or find)" HTML elements
+            A jQuery action() to be performed on the element(s)
+            Examples:
+            
+            $(this).hide() - hides the current element.
+            
+            $("p").hide() - hides all <p> elements.
+            
+            $(".test").hide() - hides all elements with class="test".
+            
+            $("#test").hide() - hides the element with id="test".</pre>
+            </big></b></div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#l1").click(function () {
+            $(".d4").css('display', 'none')
+            $(".d3").css('display', 'none')
+            $(".d1").css('display', 'block')
+            $(".d2").css('display', 'none')
+            $("#l2").css('background-color', 'rgb(233, 224, 224')
+            $(this).css('background-color', 'white')
+            $('#l3').css('background-color', 'rgb(233, 224, 224')
+
+        })
+        $("#l2").click(function () {
+            $(".d4").css('display', 'none')
+            $(".d3").css('display', 'none')
+            $(".d2").css('display', 'block')
+            $(".d1").css('display', 'none')
+            $("li:first").css('background-color', 'rgb(233, 224, 224')
+            $(this).css('background-color', 'white')
+            $("#l3").css('background-color', 'rgb(233, 224, 224')
+
+        })
+        $("#l3").click(function () {
+            // $(".d4").animate({
+            //     height: 0, width: 0,
+            // }, 8000)
+
+            // $(".d3").animate({
+            //     height: 0, width: 0,
+            // }, 8000)
+            $(".d4").toggle(5000)
+            $(".d3").slideToggle( 3000)
+            $(".d4").css('display', 'block')
+            $(".d3").css('display', 'block')
+            $(".d2").css('display', 'none')
+            $(".d1").css('display', 'none')
+            $("#l1").css('background-color', 'rgb(233, 224, 224')
+            $(this).css('background-color', 'white')
+            $("#l2").css('background-color', 'rgb(233, 224, 224')
+
+        })
+
+    })
+</script>
+
+</html>

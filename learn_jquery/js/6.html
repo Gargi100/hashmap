@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="color: blue;"><span>pick color:</span>
+    <select name="" id="s1">
+        <option value="1">blue</option>
+        <option value="2">black</option>
+        <option value="3">brown</option>
+        <option value="4">pink</option>
+        <option value="5">DeepSkyBlue</option>
+        <option value="6">cadetBlue</option>
+    </select></div>
+</body><script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+   $("#s1").change(function(){
+    $("span").css("color","brown");
+        let valu= $("#s1").val();
+        if(valu==='2'){
+        $("span").css('color','black');
+        }
+        else if(valu==='3'){
+            $("span").css('color','brown');
+        }
+        else if(valu==='4'){
+            $("span").css('color','pink');
+        }
+        else if(valu==='5'){
+            $("span").css('color','DeepSkyBlue');
+        }
+        else if(valu==='6'){
+            $("span").css('color','CadetBlue');
+        }
+        else {
+            $("span").css('color','blue');
+        }
+    })})
+</script>
+</html>

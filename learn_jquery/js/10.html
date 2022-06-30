@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 30px;
+            width: 100vw;
+            background-color: rgb(209, 199, 199);
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="1">&#10157; Section 1 <span class="my" style="display: none;" > <br><br><br><br><br>Wikipedia is a free online encyclopedia, created and edited by
+        volunteers around the world and hosted by the Wikimedia Foundation. English 6 458 000+ articles 日本語 1 314 000+
+        記事 English
+        Frank Russell, 2nd Earl Russell (1865–1931), was a British nobleman, …Joey King
+        Joey Lynn King (born July 30, 1999) is an American actress.She first gained …India
+        India - WikipediaInternational Space Station
+        The International Space Station (ISS) is a modular space station (habitable …S. P. Balasubrahmanyam
+        Balasubrahmanyam was born in Nellore, Madras Presidency (present-day Andhra … IIT Kharagpur
+        Indian Institute of Technology Kharagpur (IIT Kharagpur) is a public university </span></div>
+    <div id="2">&#10157; Section 2  <span class="my3" style="display: none;" > <br><br><br><br><br>Wikipedia is a free online encyclopedia, created and edited by
+        volunteers around the world and hosted by the Wikimedia Foundation. English 6 458 000+ articles 日本語 1 314 000+
+        記事 English
+        Frank Russell, 2nd Earl Russell (1865–1931), was a British nobleman, …Joey King
+        Joey Lynn King (born July 30, 1999) is an American actress.She first gained …India
+        India - WikipediaInternational Space Station
+        The International Space Station (ISS) is a modular space station (habitable …S. P. Balasubrahmanyam
+        Balasubrahmanyam was born in Nellore, Madras Presidency (present-day Andhra … IIT Kharagpur
+        Indian Institute of Technology Kharagpur (IIT Kharagpur) is a public university </span> </div>
+    <div id="3">&#10157; Section 3  <span class="my1" style="display: none;" > <br><br><br><br><br>Wikipedia is a free online encyclopedia, created and edited by
+        volunteers around the world and hosted by the Wikimedia Foundation. English 6 458 000+ articles 日本語 1 314 000+
+        記事 English
+        Frank Russell, 2nd Earl Russell (1865–1931), was a British nobleman, …Joey King
+        Joey Lynn King (born July 30, 1999) is an American actress.She first gained …India
+        India - WikipediaInternational Space Station
+        The International Space Station (ISS) is a modular space station (habitable …S. P. Balasubrahmanyam
+        Balasubrahmanyam was born in Nellore, Madras Presidency (present-day Andhra … IIT Kharagpur
+        Indian Institute of Technology Kharagpur (IIT Kharagpur) is a public university </span> </div>
+    <div id="4">&#10157; Section 4 <span class="my2" style="display: none;" > <br><br><br><br><br>Wikipedia is a free online encyclopedia, created and edited by
+        volunteers around the world and hosted by the Wikimedia Foundation. English 6 458 000+ articles 日本語 1 314 000+
+        記事 English
+        Frank Russell, 2nd Earl Russell (1865–1931), was a British nobleman, …Joey King
+        Joey Lynn King (born July 30, 1999) is an American actress.She first gained …India
+        India - WikipediaInternational Space Station
+        The International Space Station (ISS) is a modular space station (habitable …S. P. Balasubrahmanyam
+        Balasubrahmanyam was born in Nellore, Madras Presidency (present-day Andhra … IIT Kharagpur
+        Indian Institute of Technology Kharagpur (IIT Kharagpur) is a public university </span> </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+       
+            $("#1").click(function () {
+              $("#1").css('height','209px');
+              $("span:first").css("display","block");
+      
+     });
+     $("#1").dblclick(function () {
+        $("#1").css('height','30px');
+        $("span:first").css("display","none");
+    });
+   $("#2").click(function () {
+              $("#2").css('height','209px');
+              $(".my3").css("display","block");
+      
+     });
+     $("#2").dblclick(function () {
+        $("#2").css('height','30px');
+        $(".my3").css("display","none");
+    });
+    $("#3").click(function () {
+              $("#3").css('height','209px');
+              $(".my1").css("display","block");
+      
+     });
+     $("#3").dblclick(function () {
+        $("#3").css('height','30px');
+       $(".my1").css("display","none");
+    });
+    $("#4").click(function () {
+              $("#4").css('height','209px');
+              $(".my2").css("display","block");
+      
+     });
+     $("#4").dblclick(function () {
+        $("#4").css('height','30px');
+        $(".my2").css("display","none");
+    });
+
+       
+        // $("span").click(function () {
+            
+        //    if($("#d").hasClass('.my')){
+        //     $("#d").css('height','209px');
+        //    }
+        });
+   // })
+</script>
+
+</html>

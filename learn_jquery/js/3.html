@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            height: 600px;
+            width: 500px;
+            background-color: rgb(194, 185, 185);
+
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+   
+       
+        <form action="">
+            <center>
+                <h2>USER REGISTRATION FORM</h2>
+            </center>
+            FIRST NAME: &emsp;&nbsp;
+            <input type="text" name="first" id="" required autofocus><br>
+            LAST NAME: &emsp;&nbsp;&nbsp;
+            <input type="text" name="last" id="" required><br>
+            USER NAME:
+            &emsp; &nbsp;
+            <input type="text" name="user" id="" required><br>
+            NUMBER:
+            &emsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="password" id="password" required maxlength="10"><br>
+            GENDER: &emsp;&emsp;&emsp;
+            <label for="rad" id="gender">
+                MALE <input type="radio" name="rad" id="male" value="MALE"  >
+                FEMALE <input type="radio" name="rad" id="female" value="FEMALE">
+            </label><br>
+           <label for="" id="hus" style="display: none;" >
+            HUSBAND: &emsp;  &nbsp; &nbsp;
+            <input type="text" name="" id="" required><br>
+           </label> 
+           <label for="" id="wife" style="display: none;">
+            WIFE: &emsp;  &emsp;&emsp;&emsp; 
+            <input type="text" name="" id="" required><br>
+           </label>
+            
+            USER TYPE &emsp;  &emsp;<input type="text" name="" id="">
+           <br> ALTERNATE EMAIL <br> ADDRESS: &emsp;  &emsp; &nbsp;
+            <input type="text" name="" id="" required><br>
+            ADDRESS 1: &emsp;  &nbsp; &nbsp;
+            <input type="text" name="" id=""required><br>
+            ADDRESS 2: &emsp; &nbsp; &nbsp;
+            <input type="text" name="" id="" required><br>
+            COUNTRY: &emsp;  &emsp; &nbsp;
+            <Label for="n" >
+                <select name="" id="" required>
+                <option value="india" name="n" >india</option>
+                <option value="england" name="n">england</option>
+                <option value="france" name="n">france</option></select>
+            </Label><br>
+            STATE:&emsp;  &emsp; &emsp; &emsp;
+            
+                <select value="tamilnadu" name="n" required>
+                <option value="madhya pradesh" name="n">mp</option>
+                <option value="uttar pradesh" name="n">up</option>
+                <option value="">bengal</option></select>
+            <br>
+            CITY:
+            &emsp;  &emsp; &emsp; &emsp; &nbsp;
+            <Label for="n">
+                <select name="" id="" required>
+                <option value="pune" name="n">pune</option>
+                <option value="mumbai" name="n">mumbai</option>
+                <option value="banglore" name="n">banglore</option></select>
+            </Label><br>
+            SELECT LANGUAGE:
+            &emsp;
+           ENGLISH <input type="checkbox" name="" id="" value="ENGLISH" >
+           HINDI <input type="checkbox" name="" id="" value="HINDI" >
+            MARATHI<input type="checkbox" name="" id="" value="MARATHI" ><br>
+            <br><center>
+                <button>SUBMIT</button>
+            </center>
+            <script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    function func(){
+        // document.getElementsByTaif(document.getElementsByTagName('input')[i].disabled=true){}
+        // for(let i=1;i<=15;i++){
+        //     if( document.getElementsByTagName('input')[i].disabled==false){
+        //     document.getElementsByTagName('input')[i].disabled=true;}
+        //     else{
+        //         document.getElementsByTagName('input')[i].disabled=false;
+        //     }
+        // }
+    }
+    $(document).ready(function(){
+    $("#gender").click(function(){
+        if($("#male").is(':checked')){
+            $("#hus").css('display','block');
+            $("#wife").css('display','none');
+        }
+        if($("#female").is(':checked')){
+            $("#wife").css('display','block');
+            $("#hus").css('display','none');
+        }
+    })})
+//     let husband =document.getElementById("hus");
+//       let wife =document.getElementById("wife");
+//    male.addEventListener("click",()=>{
+//      husband.style.display='block';
+//      wife.style.display='none';
+//    })
+  
+//    female.addEventListener("click",()=>{
+//        wife.style.display='block';
+//        husband.style.display='none';
+//    }
+//    )
+  
+    
+
+</script>
+
+
+</body>
+</html>

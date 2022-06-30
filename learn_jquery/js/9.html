@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 500px;
+            background-color: rgb(251, 109, 109);
+        }
+
+      .b1 {
+            width: 495px;
+            height: 50px;
+            background-color: rgb(210, 191, 191);
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="s1" style="display: inline-block;">
+        <option value="0" id="w1">bounce</option>
+        <option value="1">drop</option>
+        <option value="2">explode</option>
+        <option value="3">highlight</option>
+        <option value="4" id="w4">slide</option>
+    </select>
+    <button>display effect</button>
+    <center>
+        <div class="d1"><button id="b1">
+                <center>Hide</center>
+            </button>
+            <br><br>
+           <span> Though the goals are broad and interdependent, two years later (6 July 2017) the SDGs were made more
+            "actionable" by a UN Resolution adopted by the General Assembly. The resolution identifies specific targets
+            for each goal, along with indicators that are being used to measure progress toward each target.[3] The year
+            by which the target is meant to be achieved is usually between 2020 and 2030.[4] For some of the targets, no
+            end date is given.</span>
+        </div>
+    </center>
+    <br><br><br>
+    
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script type = "text/javascript" 
+src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+</script>
+
+<script>
+   
+		
+     
+    //  $("#s1").select("#w4").html("hvhj")
+$(document).ready(function(){
+    $("#b1").click(function(){ 
+    $("span").css('display','none');
+    $("#b1").html("show")})
+    $("#b1").dblclick(function(){ 
+    $("span").css('display','block');
+    $("#b1").html("hide")})
+
+    $("#s1").change(function(){ 
+var sed = $("#s1").val();
+    $("button").click(function(){ 
+        if(sed==='4'){
+           
+    $(".d1").slideToggle();
+   }
+         else if(sed==='3'){
+          
+         $(".d1").html('<mark>'+$(".d1").text()+'</mark>');
+         
+          }
+          else if(sed==='2'){ sed=0;
+
+            $(".d1").toggle( "explode", {pieces: 40}, 2000 );
+          }
+        else{
+            
+            $(".d1").effect("bounce",{times:2},300);
+          }
+   })
+  })
+    // var selected;
+    // $("button").click(function(){ 
+    //   selected = $("#w4").html();
+    // if(selected==='slide'){
+    //     $(".d1").slideToggle();
+    // }
+
+  
+})
+  
+
+</script>
+
+</html>

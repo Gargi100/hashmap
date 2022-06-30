@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   #line{
+    position: absolute;
+    height: 6px;
+    width:1% ;
+    background-color: rgb(247, 61, 37);
+    left: 82px;
+    top: 30px;
+   }
+    #st{
+        position: absolute;
+        color:rgb(241, 105, 37);
+        left: 82px;
+        top: 35px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        Password* <input type="password" name="" id="" style="width: 200px; height: 12px;" minlength="8">
+        <button>uo</button>
+        <div id="line"></div>
+        <div id="st">weak</div>
+
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    alert(document.getElementById("line").clientWidth)
+    $(document).ready(function(){
+       let valu= $("input").val();
+  
+     $("input").keyup(function(){
+        
+    if($("input").val().length>8){
+       
+$("#line").css('background-color','rgb(63, 180, 63)')
+$("#st").css('color','rgb(63, 180, 63)')
+document.getElementById("line").style.width='21%';
+//$("#line").css('width','3%')
+    }
+
+if(document.getElementsByTagName("input")[0].value.match(/(?=.*[a-z])/)){
+    $("#line").css('background-color','rgb(63, 180, 63)')
+$("#st").css('color','rgb(63, 180, 63)')
+document.getElementById("line").style.width='8%';
+}
+if(document.getElementsByTagName("input")[0].value.match(/(?=.*[A-Z])/)){
+    $("#line").css('background-color','rgb(63, 180, 63)')
+$("#st").css('color','rgb(63, 180, 63)')
+document.getElementById("line").style.width='4%';
+}
+if(document.getElementsByTagName("input")[0].value.match(/(?=.*[0-9])/)){
+    $("#line").css('background-color','rgb(63, 180, 63)')
+$("#st").css('color','rgb(63, 180, 63)')
+document.getElementById("line").style.width='16%';
+}
+if(document.getElementsByTagName("input")[0].value.match(/(?=.*[!@#$%^&*])/)){
+    $("#line").css('background-color','rgb(63, 180, 63)')
+$("#st").css('color','rgb(63, 180, 63)')
+document.getElementById("line").style.width='12%';
+}
+
+})
+
+ 
+// if($("input").val){
+//         alert($("input").val().length)
+// $("#line").css('background-color','rgb(63, 180, 63)')
+// $("#st").css('color','rgb(63, 180, 63)')
+// $("#line").css('width','40px')
+// }
+    })
+       
+       // if( $("input").val.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/)){ 
+//    $("button").click(function(){
+//     alert($("input").val())
+//    }
+ //  )}
+   
+   
+
+
+
+</script>
+</html>
