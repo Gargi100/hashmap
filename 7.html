@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span style="color: blue;font-size: 21px;">Select Interval:</span>
+    <select name="" id="">
+        <option value="" class="op">2</option>
+        <option value="" class="op">3</option>
+        <option value="" class="op">5</option>
+        <option value="" class="op">10</option>
+    </select> <br><br><br>
+    <button onclick="func()">Show Time</button>
+    <br>
+    <div style="color: red;font-size: 40px;"></div>
+    <script>
+    
+    let select=0;
+  
+    let hou= d.getHours();
+    
+    
+        function func(){
+            let d = new Date();
+            let t= document.getElementsByTagName("select")[0].selectedIndex;
+    let y=document.getElementsByTagName("select")[0].options;
+    let k = parseInt( y[t].text);
+document.getElementsByTagName("div")[0].innerHTML=d.toLocaleTimeString();
+            // document.getElementsByTagName("div")[0].innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+           
+            setTimeout(function(){func()},k*1000);}
+            
+        
+        
+    </script>
+</body>
+
+</html>

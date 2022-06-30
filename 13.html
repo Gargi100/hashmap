@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <B>Validate Credit Card Number:</B><br><br>
+        <input type="text" name="" class="txt1" maxlength="4" >
+        <input type="text" name="" class="txt2"  maxlength="4">
+        <input type="text" name="" class="txt3"  maxlength="4">
+        <input type="text" name="" class="txt4"  maxlength="4"><br><br>
+        <button onclick="func()">Validate Credit Card</button>
+    </center>
+
+    <script>
+        function func(){
+     let number = document.getElementsByTagName("input")[0].value+document.getElementsByTagName("input")[1].value+document.getElementsByTagName("input")[2].value+
+     document.getElementsByTagName("input")[3].value;
+     let rev ="";
+     let doouble="";
+
+let b =0;
+let total=0;
+
+     for(let i =3; i>=0;--i){
+         rev=rev+document.getElementsByTagName("input")[i].value[3]+document.getElementsByTagName("input")[i].value[2]
+         +document.getElementsByTagName("input")[i].value[1]
+         +document.getElementsByTagName("input")[i].value[0]
+     }
+     for(let k =1;k<=16;k=k+2){
+       doouble=doouble+(rev.charAt(k)*2);
+    
+        
+       }
+    
+    for(let k =0;k<=15;k=k+2){
+       doouble=doouble+(rev.charAt(k)*1);
+    }
+    let a = doouble.split("");
+    alert(a);
+   
+ for(let k =0;k<a.length;k++){
+     b =a[k];
+     total=total+parseInt(b);
+    
+ }
+ alert(total);
+    if(total%10==0){
+        alert("Valid Credit Card Number");
+    }
+    else{
+        alert("Invalid Credit Card Number");
+    }}
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{  border: 2px solid black;
+          height:30px ;
+          width: 50px;}
+        td{
+          border: 2px solid black;
+          height:32px ;
+          width: 141px;
+        }
+        table{
+          border: 2px solid black;
+          height:360px ;
+          width: 400px;
+        }
+        tr:nth-child(1){
+        background-color: rgb(117, 38, 228);
+        }
+        tr:nth-child(2){
+        background-color:rgb(239, 137, 83);
+        }
+       
+        tr:nth-child(4){
+        background-color: rgb(131, 185, 143);
+        }
+      
+        tr:nth-child(6){
+        background-color: rgb(131, 185, 143);
+        }
+        tr:nth-child(8){
+        background-color: rgb(239, 137, 83);
+        }
+       </style>
+</head>
+<body>
+  <div>Names :</div>
+  <div>Years :</div>
+  <div>Items :</div>
+  <div>Count :</div> 
+  <button onclick="func()">create table</button> 
+  <table style="display: none;">
+    <tr style="font-size: 25px;"><th>name</th>
+    <th>year</th>
+    <th>items</th>
+    <th>count</th></tr>
+    <tr><td>a</td>
+    <td>2001</td>
+    <td>item1</td>
+    <td>103</td></tr>
+    <tr><td>b</td>
+        <td>2002</td>
+        <td>item2</td>
+        <td>104</td></tr>
+    <tr><td>c</td>
+        <td>2003</td>
+        <td>item3</td>
+        <td>105</td></tr>
+    <tr><td>d</td>
+        <td>2004</td>
+        <td>item4</td>
+        <td>102</td></tr>
+    <tr><td>e</td>
+        <td>2005</td>
+        <td>item5</td>
+        <td>109</td></tr>
+    <tr><td>f</td>
+        <td>2006</td>
+        <td>item6</td>
+        <td>108</td></tr>
+    <tr><td>g</td>
+        <td>2007</td>
+        <td>item7</td>
+        <td>106</td></tr>
+    <tr><td>h</td>
+        <td>20018/td>
+        <td>item18/td>
+        <td>107</td></tr>
+  </table>
+  <p id="href"></p>
+</body>
+<script>
+  document.getElementById("href").innerHTML ="The full URL of this page is:<br>" + window.location.href;
+    const name=[" a ","b ","c ","d ","e ","f ","g ","h "];
+    const year=[" 2001 ","2002 ","2003 ","2004 ","2005 ","2006 ","2007 ","2008 "];
+    const items=[" item1 ","item2 ","item3 ","item4 ","item5 ","item6 ","item7 ","item8 "];
+    const count=[" 103 ","104 ","105 ","102 ","109 ","108 ","106 ","107 "];
+    document.getElementsByTagName("div")[0].innerHTML+=name;
+    document.getElementsByTagName("div")[1].innerHTML+=year;
+    document.getElementsByTagName("div")[2].innerHTML+=items;
+    document.getElementsByTagName("div")[3].innerHTML+=count;
+  function func(){
+document.getElementsByTagName("table")[0].style.display='block';
+document.getElementsByTagName("div")[0].style.display='none';
+    document.getElementsByTagName("div")[1].style.display='none';
+    document.getElementsByTagName("div")[2].style.display='none';
+    document.getElementsByTagName("div")[3].style.display='none';
+  }
+</script>
+</html>
