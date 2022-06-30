@@ -10,23 +10,60 @@
     <div> <br><br>
         Check the number is Prime or Not <br><br><br>
         Enter a number: &nbsp;
-        <input type="text" id="inpp" pattern="[1-9]{1}">
+        <input type="number" id="inpp" >
         <button id="btn">Check Prime Number</button>
 
     </div>
     <script>
-        let num=document.getElementById('inpp').value;
+         let num=document.getElementsByTagName("input")[0].value;
         let val= true;
-        for(let i =2; i<=num;i++){ 
-          if(num%i==0){
-              val = false;
-              break;}}
-              btn.addEventListener("click",()=>{
-        if(val==false){
-            alert(num+"num is  prime");
-        }
-        else
-        alert(num+"num is not prime");})
+
+        btn.addEventListener("click",()=>{
+            // alert(num)
+    if(document.getElementsByTagName("input")[0].value==="1"){
+        alert("number is neither prime nor composite")
+    }
+    else if(document.getElementsByTagName("input")[0].value>"1"){
+   for(let i=2;i<document.getElementsByTagName("input")[0].value;i++){
+    if(document.getElementsByTagName("input")[0].value%i==0){
+         val=false;
+        // alert(num+"num is not prime");
+        break;
+    }
+   }
+ if(val){
+    alert(num+"num is prime");
+ }
+ else{
+    alert(num+"num is not prime");
+ }
+   }
+else{
+    alert("Aesg");
+}})
+   
+//         const isPrime = (num) => {
+//   for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+//     if (num % i === 0) {
+//      return false;
+//   }
+//   return true;
+// };
+// if(isPrime==false){
+//     alert("warfs")
+// }
+        // let num=document.getElementById('inpp').value;
+        // let val= true;
+        // for(let i =2; i<=num;i++){ 
+        //   if(num%i==0){
+        //       val = false;
+        //       break;}}
+        //       btn.addEventListener("click",()=>{
+        // if(val==false){
+        //     alert(num+"num is  prime");
+        // }
+        // else
+        // alert(num+"num is not prime");})
              
 
            
