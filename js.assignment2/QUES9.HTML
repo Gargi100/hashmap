@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="" disabled> <br> <br>
-   <input type="button" name="" id="" value="open child" onclick="func()">
-    
+  <form action="" name="f1">  <input type="text" name="inp" id="" disabled> <br> <br>
+    <input type="button" name="valuu" id="" value="open child" onclick="func()">
+     </form>
     <script>function func(){ 
-    let achild =window.open("ques99.html",'Ratting',"width=400,height=400 ,left=150,top=200")
-    achild.document.getElementsByTagName('button')[0].style.border='2pc solid green';
-         achild.opener.document.getElementsByTagName("button")[0].addEventListener("click",()=>{
-             alert("hju");
-           let name=  achild.opener.document.getElementsByTagName("input")[0].value;
-           document.getElementsByTagName("input")[0].value=name
-           ;
-         })}
+    let achild =window.open("ques99.html",'Ratting',"width=400,height=400 ,left=150,top=200 ")
+    
+    
+        //  achild.opener.document.getElementsByTagName("button")[0].addEventListener("click",()=>{
+        //      alert("hju");
+        //    let name=  achild.opener.document.getElementsByTagName("input")[0].value;
+        //    document.getElementsByTagName("input")[0].value=name
+        //    ;
+        //  })
+        }
 
     </script>
 </body>
